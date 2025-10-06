@@ -48,8 +48,55 @@
 
           <!-- Call to Action Button -->
           <button class="cta-button">Get A Quote</button>
+
+          <!-- Hamburger Menu Icon -->
+          <div class="hamburger-menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </header>
+
+      <!-- Mobile Menu Overlay -->
+      <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="toggleMenu()"></div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+          <div class="mobile-logo-section">
+            <img src="Group.png" alt="Company Logo" class="mobile-logo" />
+            <div class="mobile-logo-text">
+              <h3>COMPANY</h3>
+              <span class="mobile-logo-tagline">business tagline</span>
+            </div>
+          </div>
+          <button class="close-menu" onclick="toggleMenu()">✕</button>
+        </div>
+        <nav class="mobile-nav">
+          <a href="#" class="mobile-nav-link">
+            <span class="nav-icon">🏠</span>
+            <span>Home</span>
+          </a>
+          <a href="#" class="mobile-nav-link">
+            <span class="nav-icon">ℹ️</span>
+            <span>About Us</span>
+          </a>
+          <a href="#" class="mobile-nav-link">
+            <span class="nav-icon">💼</span>
+            <span>Our Services</span>
+          </a>
+          <a href="#" class="mobile-nav-link">
+            <span class="nav-icon">💰</span>
+            <span>Pricing</span>
+          </a>
+          <a href="#" class="mobile-nav-link">
+            <span class="nav-icon">❓</span>
+            <span>FAQ</span>
+          </a>
+        </nav>
+        <button class="mobile-cta-button">CONTACT US</button>
+      </div>
 
       <!-- Hero Content Container -->
       <div class="hero-container">
@@ -205,5 +252,25 @@
         </div>
       </div>
     </section>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('mobileMenuOverlay');
+        const header = document.querySelector('.header');
+        const body = document.body;
+
+        menu.classList.toggle('active');
+        overlay.classList.toggle('active');
+
+        if (menu.classList.contains('active')) {
+          header.style.display = 'none';
+          body.style.overflow = 'hidden';
+        } else {
+          header.style.display = 'flex';
+          body.style.overflow = 'auto';
+        }
+      }
+    </script>
   </body>
 </html>
