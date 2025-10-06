@@ -21,6 +21,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
     <!-- Hero Section with Header -->
@@ -59,7 +63,11 @@
       </header>
 
       <!-- Mobile Menu Overlay -->
-      <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="toggleMenu()"></div>
+      <div
+        class="mobile-menu-overlay"
+        id="mobileMenuOverlay"
+        onclick="toggleMenu()"
+      ></div>
 
       <!-- Mobile Menu -->
       <div class="mobile-menu" id="mobileMenu">
@@ -75,27 +83,31 @@
         </div>
         <nav class="mobile-nav">
           <a href="#" class="mobile-nav-link">
-            <span class="nav-icon">🏠</span>
+            <span class="nav-icon"
+              ><i class="fa-notdog-duo fa-solid fa-house"></i
+            ></span>
             <span>Home</span>
           </a>
           <a href="#" class="mobile-nav-link">
-            <span class="nav-icon">ℹ️</span>
+            <span class="nav-icon"><i class="fa-solid fa-circle-info"></i></span>
             <span>About Us</span>
           </a>
           <a href="#" class="mobile-nav-link">
-            <span class="nav-icon">💼</span>
+            <span class="nav-icon"><i class="fa-solid fa-gears"></i></span>
             <span>Our Services</span>
           </a>
           <a href="#" class="mobile-nav-link">
-            <span class="nav-icon">💰</span>
+            <span class="nav-icon"><i class="fa-solid fa-tag"></i></span>
             <span>Pricing</span>
           </a>
           <a href="#" class="mobile-nav-link">
-            <span class="nav-icon">❓</span>
+            <span class="nav-icon"><i class="fa-solid fa-circle-question"></i></span>
             <span>FAQ</span>
           </a>
         </nav>
-        <button class="mobile-cta-button">CONTACT US</button>
+        <div class="moblie-cta">
+          <button class="mobile-cta-button">CONTACT US</button>
+        </div>
       </div>
 
       <!-- Hero Content Container -->
@@ -176,8 +188,9 @@
 
         <!-- Section Title -->
         <h2 class="section-title">
-          You're Not Just Another Applicant And Your Resume Shouldn't Look Like
-          One
+          You're Not Just
+          <span class="highlight-text">Another Applicant</span> And Your Resume
+          Shouldn't Look Like One
         </h2>
 
         <!-- Features Grid: 4 Feature Cards -->
@@ -193,7 +206,7 @@
             <div class="feature-title-container">
               <p class="feature-description">
                 Get a professionally written, keyword-optimized resume that
-                lands in recruiter inboxes—not rejection piles.
+                lands in recruiter inboxes.
               </p>
             </div>
           </div>
@@ -203,9 +216,7 @@
             <div class="feature-image">
               <img src="img2.png" alt="Cover Letter" />
               <div class="feature-title">
-                <span>
-                  A Cover Letter That Gets Read
-                </span>
+                <span> A Cover Letter That Gets Read </span>
               </div>
             </div>
             <div class="feature-title-container">
@@ -221,9 +232,7 @@
             <div class="feature-image">
               <img src="img3.png" alt="LinkedIn" />
               <div class="feature-title">
-                <span>
-                  A LinkedIn Profile That Works For You
-                </span>
+                <span> A LinkedIn Profile That Works For You </span>
               </div>
             </div>
             <div class="feature-title-container">
@@ -255,20 +264,20 @@
 
     <script>
       function toggleMenu() {
-        const menu = document.getElementById('mobileMenu');
-        const overlay = document.getElementById('mobileMenuOverlay');
-        const header = document.querySelector('.header');
+        const menu = document.getElementById("mobileMenu");
+        const overlay = document.getElementById("mobileMenuOverlay");
+        const header = document.querySelector(".header");
         const body = document.body;
 
-        menu.classList.toggle('active');
-        overlay.classList.toggle('active');
+        menu.classList.toggle("active");
+        overlay.classList.toggle("active");
 
-        if (menu.classList.contains('active')) {
-          header.style.display = 'none';
-          body.style.overflow = 'hidden';
+        if (menu.classList.contains("active")) {
+          header.style.display = "none";
+          body.style.overflow = "hidden";
         } else {
-          header.style.display = 'flex';
-          body.style.overflow = 'auto';
+          header.style.display = "flex";
+          body.style.overflow = "auto";
         }
       }
     </script>
